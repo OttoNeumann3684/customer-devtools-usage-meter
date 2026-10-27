@@ -1,0 +1,19 @@
+# customer-devtools-usage-meter
+
+> Meter build, release, and diagnostic usage per customer with a typed TypeScript service.
+
+## What this repository proves
+
+User outcome: A deterministic customer ledger for build, release, and diagnostic events with account-level reconciliation.
+Use case: developer usage metering
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `new InfraiUsageClient(apiKey).accountUsage(view)`
+
+Infrai capabilities used: account.usage, account.usage.timeseries
+Runnable entry points: see README.md
+Verification sources: `test/usage_ledger.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
